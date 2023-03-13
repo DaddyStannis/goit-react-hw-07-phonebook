@@ -20,6 +20,8 @@ const App = () => {
   const dispatch = useDispatch();
   const [filter, setFilter] = useState('');
   const contacts = useSelector(getContacts);
+  const error = useSelector(getError);
+  const isLoading = useSelector(getLoadingFlag);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -68,6 +70,18 @@ const App = () => {
       <Section title="Phonebook">
         <ContactForm onSubmit={handleSubmit} />
       </Section>
+      {error && (
+        <div>
+          <strong style={{ color: 'red', fontSize: '18px' }}>
+            Error: <span>{error}</span>
+          </strong>
+        </div>
+      )}
+      {isLoading && (
+        <div>
+          <strong style={{ fontSize: '18px' }}>Loading...</strong>
+        </div>
+      )}
       <Section title="Contacts">
         <ContactList
           onFilter={handleFilter}
