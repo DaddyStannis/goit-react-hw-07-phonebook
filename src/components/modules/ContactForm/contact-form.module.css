@@ -1,0 +1,13 @@
+.wrapper {
+  padding: 24px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #000000;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

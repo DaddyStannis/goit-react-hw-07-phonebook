@@ -1,0 +1,11 @@
+.label-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input {
+  padding: 4px 8px;
+  font-size: 16px;
+}

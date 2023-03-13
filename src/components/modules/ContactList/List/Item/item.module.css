@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  display: block;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.item:not(:first-child) {
+  margin-top: 10px;
+}
+
+.delete-button {
+  cursor: pointer;
+}
