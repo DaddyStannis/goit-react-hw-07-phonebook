@@ -22,7 +22,7 @@ async function createContact(name, number) {
     method: 'POST',
     body: JSON.stringify(requestData),
   };
-  console.log(params);
+
   return fetchJson(BASE_URL, params);
 }
 
