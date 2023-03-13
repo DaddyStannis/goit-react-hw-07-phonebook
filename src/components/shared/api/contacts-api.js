@@ -20,6 +20,9 @@ async function createContact(name, number) {
 
   const params = {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify(requestData),
   };
 
